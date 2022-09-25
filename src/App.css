@@ -1,0 +1,101 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+:root {
+	--primary: #2abf36;
+}
+
+.App {
+	padding: 40px;
+}
+
+.title h1 {
+	color: var(--primary);
+	text-transform: uppercase;
+}
+
+.title h2 {
+	color: #666;
+}
+
+.game {
+	margin-top: 60px;
+	display: flex;
+	justify-content: center;
+}
+
+.game-status {
+	font-size: 18px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+.game-info {
+	margin-left: 40px;
+	flex-grow: 1;
+	max-height: 500px;
+	overflow: auto;
+	border: solid 1px #ccc;
+	padding: 20px;
+}
+
+.game-history button {
+	font-size: 16px;
+	margin-bottom: 8px;
+	cursor: pointer;
+	padding: 4px 6px;
+}
+
+.square {
+	background: #fff;
+	border: 1px solid #999;
+	float: left;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 50px;
+	height: 50px;
+	width: 50px;
+	margin-right: -1px;
+	margin-top: -1px;
+	padding: 0;
+	text-align: center;
+}
+
+.square.selected,
+.history-active,
+.history-active button {
+	color: var(--primary);
+	font-weight: bold;
+}
+
+.square.win-highlight {
+	background-color: rgba(247, 139, 31, 0.35);
+}
+
+.status-wrap {
+	display: flex;
+	align-items: center;
+}
+
+.sort-btn {
+	font-size: 16px;
+	margin-left: 20px;
+	background-color: var(--primary);
+	color: #fff;
+	border: none;
+	outline: none;
+	padding: 6px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+}
